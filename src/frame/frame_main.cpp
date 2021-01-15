@@ -229,7 +229,7 @@ void Frame_Main::StatusBar(m5epd_update_mode_t mode) {
     _bar->fillCanvas(0);
     _bar->drawFastHLine(0, 43, 540, 15);
     _bar->setTextDatum(CL_DATUM);
-    _bar->drawString("frame_wifiscan.cpp", 10, 27);
+    _bar->drawString("M5Paper", 10, 27);
 
     // Battery
     _bar->setTextDatum(CR_DATUM);
