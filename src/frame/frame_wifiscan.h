@@ -4,16 +4,22 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_WifiScan : public Frame_Base
-{
+class Frame_WifiScan : public Frame_Base {
 public:
     Frame_WifiScan();
-    ~Frame_WifiScan();
-    int init(epdgui_args_vector_t &args);
+
+    ~Frame_WifiScan() override;
+
+    int init(epdgui_args_vector_t &args) override;
+
     int scan();
-    int run();
+
+    int run() override;
+
     void Connect();
-    void DrawItem(EPDGUI_Button *btn, String ssid, int rssi);
+
+    static void DrawItem(EPDGUI_Button *btn, String ssid, int rssi);
+
     void SetConnected(String ssid, int rssi);
 
 private:

@@ -4,11 +4,12 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_Setting : public Frame_Base
-{
+class Frame_Setting : public Frame_Base {
 public:
     Frame_Setting();
+
     ~Frame_Setting();
+
     int init(epdgui_args_vector_t &args);
 
 

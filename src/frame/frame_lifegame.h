@@ -4,13 +4,16 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_Lifegame : public Frame_Base
-{
+class Frame_Lifegame : public Frame_Base {
 public:
     Frame_Lifegame();
+
     ~Frame_Lifegame();
+
     int init(epdgui_args_vector_t &args);
+
     int run();
+
     void exit();
 
 private:

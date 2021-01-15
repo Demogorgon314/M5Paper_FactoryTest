@@ -4,20 +4,27 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_FactoryTest : public Frame_Base
-{
+class Frame_FactoryTest : public Frame_Base {
 public:
     Frame_FactoryTest();
+
     ~Frame_FactoryTest();
+
     int run();
+
     void scan(String *ssid, int32_t *rssi);
+
     int init(epdgui_args_vector_t &args);
 
 private:
     void drawItem(m5epd_update_mode_t mode);
-    void drawItem(uint16_t flag, const char* str, int y);
+
+    void drawItem(uint16_t flag, const char *str, int y);
+
     void drawGrove(m5epd_update_mode_t mode);
+
     bool checkGrove(int sda, int scl);
+
     void drawPassCount(m5epd_update_mode_t mode);
 
 

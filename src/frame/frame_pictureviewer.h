@@ -4,13 +4,16 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_PictureViewer : public Frame_Base
-{
+class Frame_PictureViewer : public Frame_Base {
 public:
     Frame_PictureViewer(String path);
+
     ~Frame_PictureViewer();
+
     int init(epdgui_args_vector_t &args);
+
     int run();
+
     void err(String info);
 
 private:

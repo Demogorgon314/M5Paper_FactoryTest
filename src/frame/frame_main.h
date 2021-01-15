@@ -3,14 +3,18 @@
 
 #include "frame_base.h"
 
-class Frame_Main : public Frame_Base
-{
+class Frame_Main : public Frame_Base {
 public:
     Frame_Main();
-    ~Frame_Main();
-    int run();
-    int init(epdgui_args_vector_t &args);
+
+    ~Frame_Main() override;
+
+    int run() override;
+
+    int init(epdgui_args_vector_t &args) override;
+
     void StatusBar(m5epd_update_mode_t mode);
+
     void AppName(m5epd_update_mode_t mode);
 
 private:

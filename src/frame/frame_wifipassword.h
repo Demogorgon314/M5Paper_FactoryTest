@@ -4,12 +4,14 @@
 #include "frame_base.h"
 #include "../epdgui/epdgui.h"
 
-class Frame_WifiPassword : public Frame_Base
-{
+class Frame_WifiPassword : public Frame_Base {
 public:
-    Frame_WifiPassword(bool isHorizontal = false);
-    ~Frame_WifiPassword();
-    int run();
+    explicit Frame_WifiPassword(bool isHorizontal = false);
+
+    ~Frame_WifiPassword() override;
+
+    int run() override;
+
     int init(epdgui_args_vector_t &args);
 
 private:

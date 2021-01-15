@@ -5,13 +5,16 @@
 #include "../epdgui/epdgui.h"
 #include "SD.h"
 
-class Frame_txtReader : public Frame_Base
-{
+class Frame_txtReader : public Frame_Base {
 public:
     Frame_txtReader(String path);
+
     ~Frame_txtReader();
+
     int init(epdgui_args_vector_t &args);
+
     uint32_t renderText(uint32_t cursor, uint32_t length, M5EPD_Canvas *canvas);
+
     int run();
 
 private:
