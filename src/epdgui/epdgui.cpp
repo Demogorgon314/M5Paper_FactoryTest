@@ -2,6 +2,7 @@
 #include <map>
 #include <list>
 #include "epdgui.h"
+#include <ArduinoOTA.h>
 
 typedef struct {
     Frame_Base *frame;
@@ -109,6 +110,7 @@ void EPDGUI_Run(Frame_Base *frame) {
             }
             last_active_time = 0;
         }
+        ArduinoOTA.handle();
     }
 }
 
